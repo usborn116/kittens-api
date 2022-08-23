@@ -1,0 +1,3 @@
+<h1>Edit this cat, <%=@kitten.name%></h1>
+<%= render 'form', kitten: @kitten %>
+<%= button_to "Destroy this kitten", @kitten, method: :delete %>

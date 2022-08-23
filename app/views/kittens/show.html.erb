@@ -1,0 +1,11 @@
+<h1>Kittens#show</h1>
+<h2>who is this cat?</h2>
+<%= link_to "#{@kitten.name}", @kitten %>
+Age: <%= @kitten.age%><br>
+Cuteness: <%= @kitten.cuteness%><br>
+Softness: <%= @kitten.softness%><br>
+<div>
+  <%= link_to "Edit this kitten", edit_kitten_path(@kitten) %> |
+  <%= link_to "Back to kittens", kittens_path %>
+  <%= button_to "Destroy this kitten", @kitten, method: :delete %>
+</div>

@@ -1,0 +1,11 @@
+<h1>Kittens#index</h1>
+<% @kittens.each do |k|%>
+<%= link_to "#{k.name}", k %>
+Age: <%= k.age%><br>
+Cuteness: <%= k.cuteness%><br>
+Softness: <%= k.softness%><br>
+<%= button_to "Destroy this kitten", k, method: :delete %>
+<br>
+<br>
+<%end%>
+<%= link_to "New kitten", new_kitten_path %>

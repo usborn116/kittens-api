@@ -1,0 +1,25 @@
+<h2>edit?</h2>
+<% if kitten.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(kitten.errors.count, "error") %> prohibited this kitten from being saved:</h2>
+
+      <ul>
+        <% kitten.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<%= form_with(model: kitten) do |form| %>
+  <%= label_tag :name %>
+  <div><%= form.text_field :name %></div>
+  <%= label_tag :age %>
+  <div><%= form.number_field :age, in: 1..30 %></div>
+  <%= label_tag :cuteness %>
+  <div><%= form.text_field :cuteness %></div>
+  <%= label_tag :softness %>
+  <div><%= form.text_field :softness %></div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
