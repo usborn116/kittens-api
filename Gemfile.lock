@@ -91,6 +91,7 @@ GEM
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     erubi (1.11.0)
+    flickr (2.1.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
     http-accept (1.7.0)
@@ -235,6 +236,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  flickr (~> 2.0, >= 2.0.2)
   importmap-rails
   jbuilder
   puma (~> 5.0)
